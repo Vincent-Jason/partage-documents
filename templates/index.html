@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de description produit</title>
+</head>
+<body>
+    <h1>Générateur de description produit</h1>
+    <form method="POST">
+        <label for="keywords">Entrez les mots-clés du produit :</label>
+        <input type="text" id="keywords" name="keywords" required>
+        <input type="submit" value="Générer la description">
+    </form>
+    {% if description %}
+        <h2>Description générée :</h2>
+        <p>{{ description }}</p>
+    {% endif %}
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur d'images avec Stable Diffusion</title>
+</head>
+<body>
+    <h1>Générateur d'images</h1>
+    <form method="POST">
+        <label for="prompt">Entrez une description :</label>
+        <input type="text" id="prompt" name="prompt" required>
+        <input type="submit" value="Générer l'image">
+    </form>
+    {% if image_path %}
+        <h2>Image générée :</h2>
+        <img src="{{ image_path }}" alt="Image générée">
+    {% endif %}
+</body>
+</html>
