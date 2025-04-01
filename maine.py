@@ -11,7 +11,7 @@ pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float
 pipe = pipe.to("cpu")  # Remplace par "cuda" si tu as une carte graphique compatible
 
 def generate_image(prompt):
-    """Génère une image à partir d'un texte et la sauvegarde."""
+    """Génère une image à partir d'un super texte et la sauvegarde."""
     image = pipe(prompt).images[0]
     image_path = "static/generated_image.png"
     image.save(image_path)
